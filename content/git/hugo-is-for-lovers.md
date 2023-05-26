@@ -14,73 +14,48 @@ summary="This is the summary Goto [hugo releases](https://github.com/spf13/hugo/
 
 ## How to create a branch?
 
-Follow the following steps:
+Creating a new branch in remote:
 
- 1. Clone the [hugo repository](http://github.com/spf13/hugo)
- 2. Go into the repo
- 3. Run hugo in server mode and build the docs
- 4. Open your browser to http://localhost:1313
-
-Follow the following steps:
- 1. 원격에서 브랜치 만들기
-    1. 깃허브에서 브랜치 만들기
-    2. git fetch -p
-    3. git checkout <브랜치 이름>
- 2. 로컬에서 브랜치 만들고 원격에 올리기
-    1. git branch <브랜치 이름>
-    2. git checkout <브랜치 이름>
-    3. git push <원격><브랜치 이름>
-    4. git branch -a
+ 1. 깃허브에서 브랜치 만들기
+ 2. git fetch -p
+ 3. git checkout <브랜치 이름>
  
+Creating a new branch in local:
 
-Corresponding pseudo commands:
+ 1. git branch <브랜치 이름>
+ 2. git checkout <브랜치 이름>
+ 3. git push <원격><브랜치 이름>
+ 4. git branch -a
+ 
+## How to merge branch?
 
-    git clone https://github.com/spf13/hugo
-    cd hugo
-    /path/to/where/you/installed/hugo server --source=./docs
-    > 29 pages created
-    > 0 tags index created
-    > in 27 ms
-    > Web Server is available at http://localhost:1313
-    > Press ctrl+c to stop
+merge order:
+ 
+ 1. 로컬에서 수정한 작업을 원격으로 푸시
+    a. git add .
+    b. git commit -m “수정메세지”
+    c. git push
 
-Once you've gotten here, follow along the rest of this page on your local build.
+ 2. 원격 저장소로 푸시되고 나면 병합 작업
+    a. PR 생성 후 검토
+    b. merge
 
-## Step 3. Change the docs site
+ 3. 로컬 저장소 동기화 및 브랜치삭제
+    a. git checkout main
+    b. git pull
+    c. git branch -d <삭제할 브랜치 이름>
+    d. git push orgin —delete <삭제할 브랜치 이름>
 
-Stop the Hugo process by hitting ctrl+c.
+## branch command
 
-Now we are going to run hugo again, but this time with hugo in watch mode.
+git branch # 현재 브랜치 확인하기
+git branch name1 # name1이라는 브랜치 새로 만들기 
+git checkout name1 # name1 브랜치로 체크아웃(이동하기)
+git branch -a # 모든 branch 정보를 보여줍니다.
+git log --oneline # 한 줄에 한 커밋씩 나타내줌, 커밋을 확인할 때 유용
+git log --oneline --branches # 각 브랜치의 최신 커밋을 볼 수 있음
+git branch -d name1 # 로컬에서 name1 브랜치 삭제하기
+git push origin --delete name1 # 원격에 있는 name1 브랜치 삭제하기
 
-    /path/to/hugo/from/step/1/hugo server --source=./docs --watch
-    > 29 pages created
-    > 0 tags index created
-    > in 27 ms
-    > Web Server is available at http://localhost:1313
-    > Watching for changes in /Users/spf13/Code/hugo/docs/content
-    > Press ctrl+c to stop
 
 
-Open your [favorite editor](http://vim.spf13.com) and change one of the source
-content pages. How about changing this very file to *fix the typo*. How about changing this very file to *fix the typo*.
-
-Content files are found in `docs/content/`. Unless otherwise specified, files
-are located at the same relative location as the url, in our case
-`docs/content/overview/quickstart.md`.
-
-Change and save this file.. Notice what happened in your terminal.
-
-    > Change detected, rebuilding site
-
-    > 29 pages created
-    > 0 tags index created
-    > in 26 ms
-
-Refresh the browser and observe that the typo is now fixed.
-
-Notice how quick that was. Try to refresh the site before it's finished building.. I double dare you.
-Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.
-
-## Step 4. Have fun
-
-The best way to learn something is to play with it.
