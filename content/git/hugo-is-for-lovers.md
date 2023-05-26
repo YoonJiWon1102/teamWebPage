@@ -7,19 +7,12 @@ banner = "img/banners/banner-3.jpg"
 summary="This is the summary Goto [hugo releases](https://github.com/spf13/hugo/releases) and download the appropriate version for your os and architecture. Save it somewhere specific as we will be using it in the next step. More complete instructions are available at [installing hugo](/overview/installing/)"
 +++
 
-## Step 1. Install Hugo
+## What is branch? 
+다른 작업에 영향을 받지 않고 독립적으로 작업을 하기 위한 개념.
+여러 작업을 동시에 하기 편함.
 
-Goto [hugo releases](https://github.com/spf13/hugo/releases) and download the
-appropriate version for your os and architecture.
 
-Save it somewhere specific as we will be using it in the next step.
-
-More complete instructions are available at [installing hugo](/overview/installing/)
-
-## Step 2. Build the Docs
-
-Hugo has its own example site which happens to also be the documentation site
-you are reading right now.
+## How to create a branch?
 
 Follow the following steps:
 
@@ -27,6 +20,18 @@ Follow the following steps:
  2. Go into the repo
  3. Run hugo in server mode and build the docs
  4. Open your browser to http://localhost:1313
+
+Follow the following steps:
+ 1. 원격에서 브랜치 만들기
+    1. 깃허브에서 브랜치 만들기
+    2. git fetch -p
+    3. git checkout <브랜치 이름>
+ 2. 로컬에서 브랜치 만들고 원격에 올리기
+    1. git branch <브랜치 이름>
+    2. git checkout <브랜치 이름>
+    3. git push <원격><브랜치 이름>
+    4. git branch -a
+ 
 
 Corresponding pseudo commands:
 
