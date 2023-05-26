@@ -7,7 +7,7 @@
 <meta name="googlebot" content="index,follow,snippet,archive">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Hugo is for lovers</title>
+<title>What is branch</title>
 <meta name="author" content="DevCows" />
 
 
@@ -36,7 +36,7 @@
 
 
 
-<link href="/teamWebPage/css/custom.css?1685127389" rel="stylesheet">
+<link href="/teamWebPage/css/custom.css?1685127836" rel="stylesheet">
 
 
 
@@ -66,7 +66,7 @@
 
 <meta property="og:locale" content="en_us">
 <meta property="og:site_name" content="Universal">
-<meta property="og:title" content="Hugo is for lovers">
+<meta property="og:title" content="What is branch">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yoonjiwon1102.github.io/teamWebPage/git/hugo-is-for-lovers/" />
 <meta property="og:description" content="Site template made by Devcows using Hugo">
@@ -85,7 +85,7 @@
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@GoHugoIO">
-<meta name="twitter:title" content="Hugo is for lovers">
+<meta name="twitter:title" content="What is branch">
 
 <meta name="twitter:image" content="https://yoonjiwon1102.github.io/teamWebPage/img/banners/banner-3.jpg">
 
@@ -139,10 +139,10 @@
             <div class="navbar-header">
                 <a class="navbar-brand home" href="/teamWebPage/">
                     
-                      <img src="/teamWebPage/img/logo.png" alt="Hugo is for lovers logo" class="hidden-xs hidden-sm" />
-                      <img src="/teamWebPage/img/logo-small.png" alt="Hugo is for lovers logo" class="visible-xs visible-sm" />
+                      <img src="/teamWebPage/img/logo.png" alt="What is branch logo" class="hidden-xs hidden-sm" />
+                      <img src="/teamWebPage/img/logo-small.png" alt="What is branch logo" class="visible-xs visible-sm" />
                     
-                    <span class="sr-only">Hugo is for lovers - go to homepage</span>
+                    <span class="sr-only">What is branch - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -306,7 +306,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Hugo is for lovers</h1>
+                <h1>What is branch</h1>
             </div>
         </div>
     </div>
@@ -359,60 +359,54 @@
                         
 
                         <div id="post-content">
-                          <h2 id="step-1-install-hugo">Step 1. Install Hugo</h2>
-<p>Goto <a href="https://github.com/spf13/hugo/releases">hugo releases</a> and download the
-appropriate version for your os and architecture.</p>
-<p>Save it somewhere specific as we will be using it in the next step.</p>
-<p>More complete instructions are available at <a href="/overview/installing/">installing hugo</a></p>
-<h2 id="step-2-build-the-docs">Step 2. Build the Docs</h2>
-<p>Hugo has its own example site which happens to also be the documentation site
-you are reading right now.</p>
-<p>Follow the following steps:</p>
+                          <h2 id="what-is-branch">What is branch?</h2>
+<p>다른 작업에 영향을 받지 않고 독립적으로 작업을 하기 위한 개념.
+여러 작업을 동시에 하기 편함.</p>
+<h2 id="how-to-create-a-branch">How to create a branch?</h2>
+<p>Creating a new branch in remote:</p>
 <ol>
-<li>Clone the <a href="http://github.com/spf13/hugo">hugo repository</a></li>
-<li>Go into the repo</li>
-<li>Run hugo in server mode and build the docs</li>
-<li>Open your browser to http://localhost:1313</li>
+<li>깃허브에서 브랜치 만들기</li>
+<li>git fetch -p</li>
+<li>git checkout &lt;브랜치 이름&gt;</li>
 </ol>
-<p>Corresponding pseudo commands:</p>
-<pre><code>git clone https://github.com/spf13/hugo
-cd hugo
-/path/to/where/you/installed/hugo server --source=./docs
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Press ctrl+c to stop
-</code></pre>
-<p>Once you&rsquo;ve gotten here, follow along the rest of this page on your local build.</p>
-<h2 id="step-3-change-the-docs-site">Step 3. Change the docs site</h2>
-<p>Stop the Hugo process by hitting ctrl+c.</p>
-<p>Now we are going to run hugo again, but this time with hugo in watch mode.</p>
-<pre><code>/path/to/hugo/from/step/1/hugo server --source=./docs --watch
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
-&gt; Press ctrl+c to stop
-</code></pre>
-<p>Open your <a href="http://vim.spf13.com">favorite editor</a> and change one of the source
-content pages. How about changing this very file to <em>fix the typo</em>. How about changing this very file to <em>fix the typo</em>.</p>
-<p>Content files are found in <code>docs/content/</code>. Unless otherwise specified, files
-are located at the same relative location as the url, in our case
-<code>docs/content/overview/quickstart.md</code>.</p>
-<p>Change and save this file.. Notice what happened in your terminal.</p>
-<pre><code>&gt; Change detected, rebuilding site
-
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 26 ms
-</code></pre>
-<p>Refresh the browser and observe that the typo is now fixed.</p>
-<p>Notice how quick that was. Try to refresh the site before it&rsquo;s finished building.. I double dare you.
-Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.</p>
-<h2 id="step-4-have-fun">Step 4. Have fun</h2>
-<p>The best way to learn something is to play with it.</p>
+<p>Creating a new branch in local:</p>
+<ol>
+<li>git branch &lt;브랜치 이름&gt;</li>
+<li>git checkout &lt;브랜치 이름&gt;</li>
+<li>git push &lt;원격&gt;&lt;브랜치 이름&gt;</li>
+<li>git branch -a</li>
+</ol>
+<h2 id="how-to-merge-branch">How to merge branch?</h2>
+<p>merge order:</p>
+<ol>
+<li>
+<p>로컬에서 수정한 작업을 원격으로 푸시
+a. git add .
+b. git commit -m “수정메세지”
+c. git push</p>
+</li>
+<li>
+<p>원격 저장소로 푸시되고 나면 병합 작업
+a. PR 생성 후 검토
+b. merge</p>
+</li>
+<li>
+<p>로컬 저장소 동기화 및 브랜치삭제
+a. git checkout main
+b. git pull
+c. git branch -d &lt;삭제할 브랜치 이름&gt;
+d. git push orgin —delete &lt;삭제할 브랜치 이름&gt;</p>
+</li>
+</ol>
+<h2 id="branch-command">branch command</h2>
+<p>git branch # 현재 브랜치 확인하기
+git branch name1 # name1이라는 브랜치 새로 만들기
+git checkout name1 # name1 브랜치로 체크아웃(이동하기)
+git branch -a # 모든 branch 정보를 보여줍니다.
+git log &ndash;oneline # 한 줄에 한 커밋씩 나타내줌, 커밋을 확인할 때 유용
+git log &ndash;oneline &ndash;branches # 각 브랜치의 최신 커밋을 볼 수 있음
+git branch -d name1 # 로컬에서 name1 브랜치 삭제하기
+git push origin &ndash;delete name1 # 원격에 있는 name1 브랜치 삭제하기</p>
 
                         </div>
                         
@@ -490,19 +484,19 @@ Having nearly instant feedback enables you to have your creativity flow without 
             
             
             <li>
-                <a href="/teamWebPage/categories/lorem">LOREM (10)</a>
+                <a href="/teamWebPage/categories/lorem">LOREM (9)</a>
             </li>
             
             <li>
-                <a href="/teamWebPage/categories/programming">PROGRAMMING (15)</a>
+                <a href="/teamWebPage/categories/programming">PROGRAMMING (13)</a>
             </li>
             
             <li>
-                <a href="/teamWebPage/categories/pseudo">PSEUDO (10)</a>
+                <a href="/teamWebPage/categories/pseudo">PSEUDO (9)</a>
             </li>
             
             <li>
-                <a href="/teamWebPage/categories/starting">STARTING (5)</a>
+                <a href="/teamWebPage/categories/starting">STARTING (4)</a>
             </li>
             
         </ul>
@@ -613,19 +607,6 @@ Having nearly instant feedback enables you to have your creativity flow without 
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="https://yoonjiwon1102.github.io/teamWebPage/git/categories-post/">
-                          
-                            <img src="/teamWebPage/img/banners/banner-4.jpg" class="img-responsive" alt="Categories Post">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="https://yoonjiwon1102.github.io/teamWebPage/git/categories-post/">Categories Post</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
                         <a href="https://yoonjiwon1102.github.io/teamWebPage/linux/categories-post/">
                           
                             <img src="/teamWebPage/img/banners/banner-4.jpg" class="img-responsive" alt="Categories Post">
@@ -634,6 +615,19 @@ Having nearly instant feedback enables you to have your creativity flow without 
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="https://yoonjiwon1102.github.io/teamWebPage/linux/categories-post/">Categories Post</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://yoonjiwon1102.github.io/teamWebPage/web/categories-post/">
+                          
+                            <img src="/teamWebPage/img/banners/banner-4.jpg" class="img-responsive" alt="Categories Post">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://yoonjiwon1102.github.io/teamWebPage/web/categories-post/">Categories Post</a></h5>
                     </div>
                 </div>
                 
