@@ -7,13 +7,42 @@ banner = "img/banners/banner-4.jpg"
 authors = ["John Doe","Jane Doe"]
 +++
 
-I'm a linked post in the menu. You can add other posts by adding the following line to the frontmatter:
+## 깃허브로 협업하기
 
-    menu = "main"
-
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mauris nulla, vestibulum vel auctor sed, posuere eu lorem. Aliquam consequat augue ut accumsan mollis. Suspendisse malesuada sodales tincidunt. Vivamus sed erat ac augue bibendum porta sed id ipsum. Ut mollis mauris eget ligula sagittis cursus. Aliquam id pharetra tellus. Pellentesque sed tempus risus. Proin id hendrerit ante. Vestibulum vitae urna ut mauris ultricies dignissim. Ut ante turpis, tristique vitae sagittis quis, sagittis nec diam. Fusce pulvinar cursus porta. Vivamus maximus leo dolor, ut pellentesque lorem fringilla nec. Mauris faucibus turpis posuere sapien euismod, a ullamcorper mi maximus.
-
-Morbi varius ex vel justo dictum placerat. Sed ac arcu pretium, varius elit eget, gravida purus. Fusce sit amet massa mollis eros tincidunt sollicitudin. Suspendisse iaculis cursus mauris ut sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas elit ligula, molestie quis magna eu, semper posuere lorem. Mauris a justo pharetra, congue ex eget, tincidunt massa. Maecenas sit amet neque lorem.
-
-Curabitur at elementum quam. Curabitur tristique elit non sapien aliquam vulputate. Vivamus in odio tincidunt, tempor sem quis, tincidunt lacus. Mauris pulvinar nunc sed tempus dictum. Nam vel arcu quis mi fermentum ullamcorper non ac lacus. Donec aliquet vitae ante at imperdiet. Aenean scelerisque venenatis urna, eget elementum risus convallis ac. Nullam gravida arcu lacus, non consectetur augue pretium non. Duis dignissim eros id urna pretium congue. Nullam eu magna in sem sollicitudin tempor. Pellentesque vel convallis ligula. Quisque semper, turpis a rhoncus efficitur, magna nibh iaculis elit, eget tempor dolor eros ut mi. Maecenas eu placerat lacus. Praesent congue pretium nulla, sed suscipit metus rutrum vel.
+1. 원격 저장소 복제하기 
+    
+    git clone <github-url> : 원격 저장소를 로컬로 가져오는 명령어
+    
+2. 로컬에서 작업하고 깃허브에 올리기 
+    
+    git commit -am “메세지” (-am 옵션: add 까지 한꺼번에 함)
+    
+    git push
+    
+3. 원격저장소 커밋을 로컬로 가져오기
+    
+    git pull
+    
+    ### Git hub project step
+    
+    1. 깃허브에서 브랜치 만들기
+    2. git clone <github-url> 
+    3. 서브모듈 업데이트
+    4. 원격에서 만든 브랜치 로컬로 가져오기
+        1. git fetch -p
+        2. git chekcout <브랜치이름>
+        3. git branch -a : 브랜치 확인
+    5. 작업 수정
+        1. 새로 만든 브랜치에서 수정
+    6. 빌드 및 푸시
+        1. 깃허브에서 협업할 때는 먼저 git pull를 해서 원격저장소의 최신 커밋을 풀한 뒤에 자신의 커밋을 push하기
+        2. ![rejected] 오류 메세지: 원격 저장소에 있는 최신 커밋 정보가 없기 때문에 나타나는 메세지 
+    7. 브랜치 병합
+        1. PR 생성 후 검토
+        2. 병합
+    8. 로컬 저장소 동기화
+        1. git checkout main
+        2. git pull
+    9. 브랜치 삭제
+        1. git branch -d <삭제할 브랜치 이름>
+        2. git push orgin —delete <삭제할 브랜치 이름>
